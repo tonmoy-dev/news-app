@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://unpkg.com/leaflet/dist/leaflet.css');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+body {
+  position: "static";
+  top: "0px !important";
+  font-weight: normal;
+}
+
+iframe.skiptranslate {
+  display: "none !important";
+}
+
+/* main site */
+.live-news-btn {
+  display: flex;
+  background: #FF5555;
+  margin: 0 20px;
+}
+
+.live-news-btn a {
+  padding: 5px 10px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.live-news-btn a:hover {
+  color: #ffffff;
+}
+
+
+/* slick slider custom css */
+/* .slick-prev {
+  left: unset;
+  right: 45px;
+} */
+
+.slick-next {
+  right: 0;
+}
+
+.post-slider .slick-arrow {
+  top: 30px;
+  right: 30px;
+  color: #C1C4C6;
+  padding: 10px;
+}
+
+.trending-sidebar-slider .slick-arrow,
+.trending-news-slider .slick-arrow {
+  top: -38px;
+}
+
+.feature-post-slider .slick-arrow {
+  top: -30px;
+}
+
+.post_gallery_inner_slider .slick-dots {
+  bottom: -76px;
+}
+
+@media (max-width: 767px) {
+  .post_gallery_inner_slider .slick-dots {
+    bottom: -1px;
+  }
+
+}
+
+.post_gallery_inner_slider .slick-dots li {
+  height: auto;
+  width: auto;
+}
+
+.post_gallery_inner_slider .slick-arrow {
+  top: 535px;
+  color: #C1C4C6;
+  position: absolute;
+  height: 70px;
+
+}
+
+/* Adding gap between slides */
+.slick-slide {
+  padding: 0 10px;
+  /* Adjust this value to control the gap size */
+}
+
+/* Optional: Adjust the width of each slide container */
+.slide-container {
+  box-sizing: border-box;
+}
+
+/* Ensure the slider shows correctly with gaps */
+.slick-list {
+  margin: 0 -10px;
+  /* This compensates for the padding on the slides */
+}
+
+/* .slick-prev {
+  left: 0;
+  right: unset;
+} */
+
+.post_gallery_play .post__gallery_play_content {
+  /* padding-top: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.post_gallery_sidebar .tab-button {
+  /* box-shadow: 0px 10px 40px rgba(23, 34, 43, 0.1); */
+  padding: 0 35px;
+  line-height: 36px;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 0;
+}
+
+.post_gallery_sidebar .tab-button.hover {
+  background: #1091FF;
+  color: #ffffff;
+}
+
+
+.footer-top-border {
+  border-top: 4px solid #234e67;
+}
+
+
+.district-map {
+  width: 100%;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .district-map {
+    width: 80%;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .district-map {
+    width: 60%;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
+
+
+/* General styles for custom paging */
+
+/* Show only 3 thumbnails on small devices */
+@media (max-width: 576px) {
+  .slick-dots {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+
+  }
+
+  .slick-dots {
+    bottom: 0px;
+  }
+
+  .slick-dots .slick-dot {
+    flex: 0 0 33.33%;
+    /* Show 3 thumbnails */
+  }
+}
+
+/* Show all thumbnails on larger devices */
+@media (min-width: 577px) {
+  .slick-dots .slick-dot {
+    flex: 0 0 auto;
+    /* Show all thumbnails */
+  }
+}
+
+/* Styling for active dot */
+.slick-dots .slick-active img {
+  border: 3px solid #FF5555;
+  /* Active thumbnail border color */
+}
+
+
+.post_gallery_inner_slider .slick-prev {
+  left: 20px;
+}
+
+.post_gallery_inner_slider .slick-next {
+  right: 20px;
+}
+
+.trending-news-slider .slick-prev,
+.trending-sidebar-slider .slick-prev,
+.feature-post-slider .slick-prev {
+  left: unset;
+  right: 45px;
+}
+
+
+
+
+
+
+
+
+/* Navbar.css */
+
+.dropdown {
+  position: relative;
+  /* Position for dropdown */
+}
+
+.dropdown-content {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  /* Absolute positioning */
+  left: 0;
+  /* Align to the left */
+  top: 100%;
+  /* Position below the button */
+  background-color: white;
+  /* Background color of dropdown */
+  min-width: 150px;
+  /* Minimum width for dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Drop shadow */
+  z-index: 1;
+  padding: 4px 0 8px 16px;
+  /* Ensure dropdown is above other content */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  /* Show dropdown on hover */
+}
